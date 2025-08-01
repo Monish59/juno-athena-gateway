@@ -1,20 +1,55 @@
-JUNO–Athena Research Gateway
+# JUNO-Athena Research Gateway
 
-AI/ML-powered scientific research platform for literature intelligence, academic writing, and (on approval) in-silico workflows—with real-time collaboration, read-only Lab Library, ability gating, and full governance under **ARGOS** (Athena/Jarvis).
+A modular, privacy-aware, AI/ML-driven Streamlit research environment for literature synthesis, academic writing, and collaborative lab work.
 
-Features
-Scientist-grade UX: first-login onboarding + daily brief (AI/ML tone).
-Secure access: Email + Passkey (Athena-issued), consent logging.
-License model: 30-day key; renewal keeps the same account & projects.
-Literature & Writing: quality-filtered (2018–2025) search, review builder, manuscript drafts (human academic tone).
-Read-only Lab Library: curated/validated items, searchable, downloadable.
-Groups & Projects: collaborate from different devices; see who ran which command with exact prompts.
-Athena Chat + Supervisor Comments: large, fast chat; comments shown with “what this means” explanation.
-Ability packs (on approval): `insilico`, `synergy`, `nanoparticles`, `omics`, etc.
-Audit & governance: every action/chat saved to ARGOS memory; mentor queue notifications.
+## Features
 
-Quick Start (Local)
+- Email+Passkey authentication (Athena-issued)
+- License management + renewal
+- Modular abilities (unlock with mentor approval)
+- Scientific onboarding and daily brief
+- Lab library (read-only)
+- Secure groups, projects, findings, and chat (commands supported)
+- Supervisor comments, Athena AI assistant, audit logging (ARGOS webhooks)
+- Codespaces/devcontainer + CI
 
-bash
-pip install -r requirements.txt
-streamlit run app.py
+## Quickstart
+
+1. **Clone the repo**
+
+2. **Install requirements**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Configure secrets**
+
+   - Copy `.streamlit/secrets.example.toml` to `.streamlit/secrets.toml`
+   - Fill in your passkeys, ARGOS URLs, and tokens
+
+4. **(Optional) Seed demo data**
+   ```bash
+   python seeds/load_demo.py
+   ```
+
+5. **Run the app**
+   ```bash
+   streamlit run app.py
+   ```
+
+6. **[Optional] Use Codespaces**
+   - Open in GitHub Codespaces for instant dev environment
+
+7. **[Optional] Enable CI**
+   - CI will lint and check app boot on every push/PR
+
+## Documentation
+
+- [Abilities](docs/abilities.md)
+- [License Renewal Runbook](docs/renewal.md)
+- [Webhooks](docs/webhooks.md)
+- [Privacy Policy](COPY_PRIVACY.md)
+
+---
+
+**Contact Supervisor for access or questions.**
